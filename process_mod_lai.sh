@@ -1,15 +1,17 @@
+# -*- coding: utf-8 -*-
 #!/bin/bash
-
-####################################
-#The script reads all the modis reprojected lai files in tif format and uses a raster calculator operations to set the 
-#filled and missing values.
+############################################################################################################
+# 
+#Created on Mon Oct 30 13:08:42 2017
+#@author: chinmay deval
+#Object: The script reads all the modis reprojected lai files in tif format and uses a raster calculator 
+#operations to set the filled and missing values.
 #following the abouve operation the script renames the modis datevalues from the filename to the actual dates.
 #These files are then translated into a netcdf file using the GDAL functionality and the reference time and 
 #the date attributes are set for each file. 
 #the files are then merged into one netcdf using the CDO functionality.
-#Next the variable in the file is renamed to a more appropriate one.  
-######################################
-
+#Next the variable in the file is renamed to a more appropriate one.
+############################################################################################################
 
 #modify the fill values and the pixel values that are set for areas for which LAI could not be calculated
 for i in *.tif

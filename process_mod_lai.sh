@@ -21,7 +21,7 @@ gdal_calc.py -A set0$i --calc="A*0.1" --NoDataValue=-999 --outfile=S$i
 rm set0$i
 done
 
-#rename dates in the default modis file nomenclature
+#rename dates in the default MODIS file nomenclature
 
 yyyymmdd () { date -d "$1-01-01 +$2 days -1 day" "+%Y.%m.%d"; }
 
